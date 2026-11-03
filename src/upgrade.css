@@ -1,0 +1,63 @@
+/* SMART FARM 2.1 — investigation visual system */
+:root{--cyan:#69ebf4;--violet:#b59cff;--mint:#7ff5c6;--gold:#ffd998}
+body{background:radial-gradient(circle at 75% 8%,#203e70 0%,transparent 34%),radial-gradient(circle at 0 52%,#183655 0%,transparent 43%),#070f20}
+.home,.game,.report-page{max-width:1500px}
+.hero-scene,.scene-wrap{isolation:isolate}
+.scene-wrap{border-radius:22px;border:1px solid #55cce177;box-shadow:0 24px 100px #0008,inset 0 0 55px #52ccf013;position:relative}
+.scene-wrap:after{content:'';pointer-events:none;position:absolute;inset:0;border-radius:22px;background:linear-gradient(125deg,#ffffff0b,transparent 45%,#47e1fa09)}
+.scene-heading{background:linear-gradient(100deg,#163957ee,#0b2943);position:relative;z-index:1}
+.scene-grid{min-height:410px;background:radial-gradient(circle at 50% 47%,#22708e44,transparent 52%),radial-gradient(circle at 78% 20%,#6d55a433,transparent 42%),#071c32}
+.scene-grid:before{background-size:31px 31px;opacity:.75;transform:perspective(400px) rotateX(56deg) scale(1.45)}
+.scene-perspective svg{filter:drop-shadow(0 16px 20px #030b18bb)}
+.hotspot{width:48px;height:48px;transition:transform .25s,box-shadow .25s}
+.hotspot:hover{transform:translate(-50%,-50%) scale(1.2);box-shadow:0 0 0 12px #46f6ef24,0 0 28px #4efee3}
+.hotspot:focus-visible{outline:3px solid #fff}
+.scene-bottom{background:#0b2942}
+.glass{border:1px solid #5f9bbd4d;background:linear-gradient(155deg,#173955f5,#0b233df4);box-shadow:0 18px 45px #02091680}
+.lab-heading h2{font-size:clamp(26px,3vw,39px)}
+.lab-stamp{border:1px solid #4bd2df77;background:#104055;border-radius:40px;padding:10px 14px;color:#b9f7f7}
+.dossier{position:relative;overflow:hidden}
+.dossier:before{content:'';position:absolute;inset:0 0 auto;height:4px;background:linear-gradient(90deg,var(--cyan),var(--violet),transparent)}
+.dossier .evidence-id{font-size:clamp(54px,6vw,90px);color:#7becf6;text-shadow:0 0 35px #1fc8ed44}
+.learning-ribbon{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:20px 0}
+.learning-ribbon>div{min-height:95px;background:#112b45;border:1px solid #3a7494;border-radius:13px;padding:15px}
+.learning-ribbon b{display:block;color:#b9f5ee;font-size:14px}
+.learning-ribbon p{font-size:11px;color:#b5ccdb;line-height:1.5;margin-top:8px}
+.probe-panel{border:1px solid #ad96ee75;background:linear-gradient(135deg,#25355a,#172943);border-radius:14px;padding:17px;margin:18px 0}
+.probe-panel h4{font:600 16px Kanit,sans-serif;color:#efe6ff;margin:0 0 6px}
+.probe-panel p{font-size:12px;margin-bottom:10px}
+.probe-options{display:grid;gap:8px}
+.probe-options button{background:#0e2b49;border:1px solid #5980a5;color:#eff7ff;border-radius:9px;text-align:left;padding:12px;font-size:12px;transition:.2s}
+.probe-options button:hover,.probe-options button:focus-visible{background:#214e70;border-color:#79ecf3}
+.field-note{margin-top:14px;border-radius:12px;background:#0e3846;border:1px solid #51acaa76;padding:16px;color:#d6fff2}
+.field-note strong{display:block;color:#81f1cd;margin-bottom:5px}
+.field-note p{font-size:12px}
+.mapping-card,.mapping,.repair-card,.quiz-card{transition:border-color .2s,transform .2s}
+.mapping:hover,.quiz-card:hover{border-color:#78dcf3}
+.domain-strip>div{padding:18px 10px;border-radius:12px;background:linear-gradient(140deg,#183d58,#102742);border-color:#4b84a066}
+.domain-strip span{font-size:30px;margin-bottom:8px}
+.research-brief{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0}
+.research-brief article{background:linear-gradient(140deg,#173b53,#182a49);border:1px solid #558dac70;border-radius:14px;padding:19px}
+.research-brief h3{font:600 17px Kanit,sans-serif;color:#b5edf7}
+.research-brief p{font-size:12px;color:#d0e0e9;margin-top:8px}
+.research-brief .micro{font-size:10px;color:#8dc8d9;letter-spacing:.1em}
+.mission-progress{border:1px solid #5ed2e655;border-radius:14px;background:#0b2a42;padding:17px;margin:22px 0;display:flex;align-items:center;justify-content:space-between;gap:14px}
+.mission-progress strong{font-size:15px;color:#c2f9ed}
+.mission-progress span{font-size:12px;color:#a5c7dc}
+.sim-visual-state{height:150px;display:flex;align-items:center;justify-content:center;gap:28px;margin:12px 0;background:radial-gradient(circle,#144962,#0a263c);border:1px solid #3d7e98;border-radius:12px;overflow:hidden}
+.sim-visual-state .reservoir{width:68px;height:94px;border:3px solid #83dced;border-radius:12px;position:relative;overflow:hidden}
+.sim-visual-state .reservoir:after{content:'';position:absolute;bottom:0;left:0;right:0;height:64%;background:linear-gradient(#54ddfc,#275ca7)}
+.sim-visual-state .aqueduct{width:140px;height:10px;border:2px solid #668fa9;border-radius:10px;background:#1b4b64;position:relative}
+.sim-visual-state.active .aqueduct{background:repeating-linear-gradient(90deg,#2accea 0 15px,#b5fcff 15px 25px);animation:waterflow 1s linear infinite;box-shadow:0 0 14px #2accea}
+.sim-visual-state .seedling{font-size:68px;filter:drop-shadow(0 0 12px #4ad18b)}
+@keyframes waterflow{to{background-position:50px 0}}
+.sim-visual-state.fault{border-color:#f4a175;background:radial-gradient(circle,#573347,#0b273f)}
+.diagnostic-prompt{background:#312f48;border-left:4px solid #ffce82;border-radius:10px;padding:14px;color:#f8e8cf;font-size:12px}
+.case-brief{padding:18px;border-radius:15px;background:linear-gradient(100deg,#123d56,#192d4c);border:1px solid #5987b377;margin:18px 0 25px}
+.case-brief strong{font-size:14px;color:#a8f7f4}
+.case-brief p{font-size:12px;color:#d2e3ef;margin-top:6px}
+.lab-tabs button{border-radius:12px;background:linear-gradient(150deg,#13344e,#0c243c)}
+.lab-tabs button.active{box-shadow:0 0 22px #25bbd833,inset 0 0 22px #54ddee22}
+@media(max-width:900px){.learning-ribbon{grid-template-columns:repeat(2,minmax(0,1fr))}.research-brief{grid-template-columns:1fr}.scene-grid{min-height:260px}.mission-progress{flex-wrap:wrap}}
+@media(max-width:500px){.learning-ribbon{grid-template-columns:1fr 1fr}.learning-ribbon>div{min-height:95px;padding:10px}.scene-grid{min-height:220px}.hotspot{width:40px;height:40px;font-size:10px}.sim-visual-state{gap:12px}.sim-visual-state .aqueduct{width:76px}.sim-visual-state .seedling{font-size:45px}}
+@media(prefers-reduced-motion:reduce){.sim-visual-state.active .aqueduct,.hotspot{animation:none!important;transition:none}}
